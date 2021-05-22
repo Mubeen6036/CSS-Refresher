@@ -1,3 +1,110 @@
 *{
     box-sizing: border-box;
 }
+body{
+    margin: 0;
+    background-color: rgba(25, 161, 173, 1);
+}
+:root{
+    --color1 : rgb(148, 148, 148);
+}
+.outerContainer{
+    min-height: 100vh;
+    background-color: rgba(25, 161, 173, 1);
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    position: relative;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 8px;
+    text-align: center;
+    overflow: hidden;
+    min-width: min(350px);
+    align-items: center;
+}
+.stats{
+    display: flex;
+    flex-direction: column;
+}
+.container__names{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+}
+.container__names__age{
+    display: flex;
+}
+.container__stats{
+    display: flex;
+    margin-top: 20px;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+.container__imagebackground{
+    background: url('../images/bg-pattern-card.svg');
+    min-height: 140px;
+    width: 100%;
+}
+.container__user{
+    background: no-repeat url('../images/image-victor.jpg');
+    background-size: cover;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    border : 5px solid white;
+    position: relative;
+    top : -45px;
+}
+.container__line{
+    border-top: 1px solid rgb(201, 201, 201);
+    width: 100%;
+}
+.container_body{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    top : -30px;
+}
+.container__names__age{
+    font-weight: bold;
+}
+.container__names__age span{
+    color : var(--color1);
+}
+.stats__text{
+    color : var(--color1);
+    font-size: 80%;
+}
+.container__names__location{
+    color : var(--color1);
+    font-weight: bold;
+}
+.upper-image{
+    position: fixed;
+    background: no-repeat url('../images/bg-pattern-top.svg');
+    // height: 200px;
+    // width: 100%;
+    right: 50%;
+    bottom: 43%;
+    z-index: 1;
+}
+.lower-image{
+    position: fixed;
+    background: no-repeat url('../images/bg-pattern-bottom.svg');
+    // height: 200px;
+    // width: 100%;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+}
