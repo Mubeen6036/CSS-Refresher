@@ -1,0 +1,93 @@
+*{
+    box-sizing: border-box;
+}
+:root{
+    --color1 : rgba(226, 133, 37);
+    --color2 : rgba(1, 105, 114);
+    --color3 : rgba(0, 64, 63);
+}
+
+.outerContainer{
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+.container{
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    align-items: center;
+    overflow: hidden;
+    margin: 2rem 1rem;
+    border-radius: 6px;
+}
+.container__sedan h2, .container__suv h2, .container__Luxury h2{
+    text-transform: uppercase;
+}
+.container div{
+    padding: 1rem;
+    color: white;
+}
+.container__sedan button{
+    color : var(--color1);
+}
+.container__sedan button:hover{
+    background-color : var(--color1);
+}
+.container__sedan{
+    background-color: var(--color1);
+}
+.container__sedan__image{
+    background: no-repeat url('../images/icon-sedans.svg');
+}
+.container__suv__image{
+    background: no-repeat url('../images/icon-suvs.svg');
+}
+.container__luxury__image{
+    background: no-repeat url('../images/icon-luxury.svg');
+}
+.container__suv{
+    background-color: var(--color2);
+}
+.container__suv button{
+    color : var(--color2);
+}
+.container__suv button:hover{
+    background-color : var(--color2);
+}
+.container__Luxury{
+    background-color: var(--color3);
+}
+.container__Luxury button:hover{
+    background-color: var(--color3);
+}
+.container__Luxury button{
+    color : var(--color3);
+}
+.container button{
+    padding: 6px;
+    border-radius: 15px;
+    outline: none;
+    border : 2px solid rgba(0,0,0,0);
+}
+.container button:hover{
+    color: white;
+    border : 2px solid white;
+    cursor : pointer;
+}
+@media(min-width:800px){
+    .container{
+        flex-direction: row;
+        max-width: min(95%, 700px);
+        height: 375px;
+    }
+    .container__item{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+}
